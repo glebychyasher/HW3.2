@@ -58,6 +58,7 @@
 		FB2CC2FE2B01728000CA6EF3 /* HW3.2 */ = {
 			isa = PBXGroup;
 			children = (
+				FB2CC31D2B025EFE00CA6EF3 /* App */,
 				FB2CC3192B02525100CA6EF3 /* Delegates */,
 				FB2CC31A2B02525B00CA6EF3 /* ViewControllers */,
 				FB2CC31B2B02527600CA6EF3 /* Storyboards */,
@@ -105,9 +106,16 @@
 			isa = PBXGroup;
 			children = (
 				FB2CC3082B01728200CA6EF3 /* Assets.xcassets */,
-				FB2CC30D2B01728200CA6EF3 /* Info.plist */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		FB2CC31D2B025EFE00CA6EF3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FB2CC30D2B01728200CA6EF3 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RUD8XS9S52;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW3.2/Sources/Info.plist;
+				INFOPLIST_FILE = HW3.2/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -366,7 +374,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RUD8XS9S52;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW3.2/Sources/Info.plist;
+				INFOPLIST_FILE = HW3.2/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
