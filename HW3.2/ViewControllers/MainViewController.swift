@@ -55,22 +55,22 @@ final class MainViewController: UIViewController {
 //MARK: Working with JSON
 extension MainViewController {
     private func getInfoAboutGeneration() {
-        URLSession.shared.dataTask(with: urlAddress) { data, _, error in //необязательно использовать всё
+        URLSession.shared.dataTask(with: urlAddress) { data, _, error in 
             guard let data = data else {
+                self.showAlert(withStatus: .failed)
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
             let jsonDecoder = JSONDecoder()
             do {
-                let info = try jsonDecoder.decode(Data.self, from: data) //передаём тип
+                let info = try jsonDecoder.decode(InitialValue.self, from: data) //передаём тип
                 self.showAlert(withStatus: .success)
                 print(info)
             } catch {
-                print(error.localizedDescription)
                 self.showAlert(withStatus: .failed)
+                print(error.localizedDescription)
             }
         }.resume()
-        
     }
 }
 

@@ -7,17 +7,16 @@
 
 import Foundation
 
-struct Data: Decodable {
-    let data: [generationShares]?
+struct InitialValue: Decodable {
+    let data: Data
 }
-
-struct generationShares: Decodable {
+struct Data: Decodable {
     let from: String?
     let to: String?
-    let generationmix: [typeAndPercentage]?
+    let generationmix: [TypeAndPercentage]?
 }
 
-struct typeAndPercentage: Decodable {
+struct TypeAndPercentage: Decodable {
     let fuel: String?
     let perc: Double?
 }
