@@ -46,9 +46,7 @@ final class MainViewController: UIViewController {
         let alert = UIAlertController(title: status.title, message: status.message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
-        DispatchQueue.main.async { [unowned self] in
-            present(alert, animated: true)
-        }
+        present(alert, animated: true)
     }
 }
 
@@ -64,10 +62,14 @@ extension MainViewController {
             let jsonDecoder = JSONDecoder()
             do {
                 let info = try jsonDecoder.decode(InitialValue.self, from: data) //передаём тип
-                self.showAlert(withStatus: .success)
+                DispatchQueue.main.async {
+                    self.showAlert(withStatus: .success)
+                }
                 print(info)
             } catch {
-                self.showAlert(withStatus: .failed)
+                DispatchQueue.main.async {
+                    self.showAlert(withStatus: .failed)
+                }
                 print(error.localizedDescription)
             }
         }.resume()
